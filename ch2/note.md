@@ -13,13 +13,15 @@ playing cards. We start woth an empty left hand and the cards face down the tabl
 
 * Pseudocode:
 
-INSERTION-SORT.A/
-1 for j D 2 to A:length
-2 key D AOEj 
-3 // Insert AOEj  into the sorted sequence AOE1 : : j  1.
-4 i D j  1
-5 while i > 0 and AOEi > key
-6 AOEi C 1 D AOEi
-7 i D i  1
-8 AOEi C 1 D key
+INSERTION-SORT:
 
+```
+	for j=2 to A.length
+		key=A[j]
+		//Insert A[j] into the sorted sequence A[1....j-1]
+		i=j-1
+		while i>0 and A[i]>key
+			A[i+1]=A[i]
+			i=i-1
+		A[i+1]=key
+```
